@@ -13,6 +13,8 @@
 		9715DB4C251665E400262191 /* TimeSeriesStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715DB4B251665E400262191 /* TimeSeriesStockViewController.swift */; };
 		9715DB512516660300262191 /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715DB502516660300262191 /* ViewControllerAssembly.swift */; };
 		9715DB5B2516667700262191 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715DB5A2516667700262191 /* DIContainer.swift */; };
+		9715DB6B251694F300262191 /* StockSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715DB6A251694F300262191 /* StockSymbol.swift */; };
+		9715DB702516980F00262191 /* StockQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715DB6F2516980F00262191 /* StockQuote.swift */; };
 		97C3A48225165B1200490DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A48125165B1200490DEE /* AppDelegate.swift */; };
 		97C3A48425165B1200490DEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A48325165B1200490DEE /* SceneDelegate.swift */; };
 		97C3A48925165B1200490DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C3A48725165B1200490DEE /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		9715DB4B251665E400262191 /* TimeSeriesStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriesStockViewController.swift; sourceTree = "<group>"; };
 		9715DB502516660300262191 /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
 		9715DB5A2516667700262191 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		9715DB6A251694F300262191 /* StockSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSymbol.swift; sourceTree = "<group>"; };
+		9715DB6F2516980F00262191 /* StockQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuote.swift; sourceTree = "<group>"; };
 		97C3A47E25165B1200490DEE /* StockAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C3A48125165B1200490DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97C3A48325165B1200490DEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 		9715DB3B251664C800262191 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9715DB6A251694F300262191 /* StockSymbol.swift */,
+				9715DB6F2516980F00262191 /* StockQuote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -494,10 +500,12 @@
 			files = (
 				9715DB472516658000262191 /* Storyboard.swift in Sources */,
 				97C3A48225165B1200490DEE /* AppDelegate.swift in Sources */,
+				9715DB702516980F00262191 /* StockQuote.swift in Sources */,
 				9715DB512516660300262191 /* ViewControllerAssembly.swift in Sources */,
 				9715DB4C251665E400262191 /* TimeSeriesStockViewController.swift in Sources */,
 				9715DB5B2516667700262191 /* DIContainer.swift in Sources */,
 				9715DB422516655B00262191 /* UIViewController+Extensions.swift in Sources */,
+				9715DB6B251694F300262191 /* StockSymbol.swift in Sources */,
 				97C3A48425165B1200490DEE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
