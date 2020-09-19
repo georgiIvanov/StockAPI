@@ -12,8 +12,8 @@ import SwinjectStoryboard
 class ViewControllerAssembly: Assembly {
 
     func assemble(container: Container) {
-        container.storyboardInitCompleted(TimeSeriesStockViewController.self) { (res, controller) in
-            
+        container.storyboardInitCompleted(StockQuotesViewController.self) { (res, controller) in
+            controller.viewModel = res.resolve(StockQuotesViewModelProtocol.self)
         }
     }
 }

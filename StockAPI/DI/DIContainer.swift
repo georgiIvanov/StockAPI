@@ -19,7 +19,12 @@ extension DIContainer where Self: AppDelegate {
         Container.loggingFunction = nil
 
         let container = Container()
-        _ = Assembler([ViewControllerAssembly()], container: container)
+        let assemblies: [Assembly] = [
+            ViewControllerAssembly(),
+            ViewModelAssembly(),
+            ServiceAssembly()
+        ]
+        _ = Assembler(assemblies, container: container)
         return container
     }
 }

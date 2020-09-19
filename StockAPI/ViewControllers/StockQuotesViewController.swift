@@ -1,14 +1,17 @@
 //
-//  TimeSeriesStockViewController.swift
+//  StockQuotesViewController.swift
 //  StockAPI
 //
 //  Created by Voro on 19.09.20.
 //
 
+import Foundation
 import UIKit
 
-class TimeSeriesStockViewController: UIViewController {
+class StockQuotesViewController: UIViewController {
 
+    var viewModel: StockQuotesViewModelProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
