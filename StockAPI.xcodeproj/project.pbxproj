@@ -69,6 +69,8 @@
 		9715DB8825169E0B00262191 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		9715DB8D25169FEB00262191 /* StockQuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuotesViewModel.swift; sourceTree = "<group>"; };
 		9715DB952516A13200262191 /* StockQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuotesViewController.swift; sourceTree = "<group>"; };
+		9715DB9A2516B01800262191 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		9715DB9B2516B06300262191 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		97C3A47E25165B1200490DEE /* StockAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C3A48125165B1200490DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97C3A48325165B1200490DEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				9715DB7E25169C5700262191 /* AppConfig.swift */,
+				9715DB9A2516B01800262191 /* Debug.xcconfig */,
+				9715DB9B2516B06300262191 /* Release.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -703,7 +707,7 @@
 		};
 		97C3A4A925165B1300490DEE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40BD5055891E5BD9F51E1F12 /* Pods-StockAPI.debug.xcconfig */;
+			baseConfigurationReference = 9715DB9A2516B01800262191 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -722,7 +726,7 @@
 		};
 		97C3A4AA25165B1300490DEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77763488E7640B1793BF3FD6 /* Pods-StockAPI.release.xcconfig */;
+			baseConfigurationReference = 9715DB9B2516B06300262191 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -741,7 +745,7 @@
 		};
 		97C3A4AC25165B1300490DEE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9915422DB96E89A9FDFBA44D /* Pods-StockAPITests.debug.xcconfig */;
+			baseConfigurationReference = 9715DB9A2516B01800262191 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -763,7 +767,7 @@
 		};
 		97C3A4AD25165B1300490DEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82CB85B7E4D400BF6E2250C4 /* Pods-StockAPITests.release.xcconfig */;
+			baseConfigurationReference = 9715DB9B2516B06300262191 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -785,7 +789,7 @@
 		};
 		97C3A4AF25165B1300490DEE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40AB282D5BBCEEADBAD34FCE /* Pods-StockAPI-StockAPIUITests.debug.xcconfig */;
+			baseConfigurationReference = 9715DB9A2516B01800262191 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -805,7 +809,7 @@
 		};
 		97C3A4B025165B1300490DEE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9054617F3FD146F147CFAEC /* Pods-StockAPI-StockAPIUITests.release.xcconfig */;
+			baseConfigurationReference = 9715DB9B2516B06300262191 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

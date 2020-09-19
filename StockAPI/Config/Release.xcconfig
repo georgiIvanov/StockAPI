@@ -1,0 +1,17 @@
+//
+//  Release.xcconfig
+//  StockAPI
+//
+//  Created by Voro on 20.09.20.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-StockAPI/Pods-StockAPI.release.xcconfig"
+
+STOCK_API_BASE_URL = www.alphavantage.co
+
+STOCK_API_KEY = 09MB7IDOOVFCJMW3
+
+STUB_RESPONSE = false
