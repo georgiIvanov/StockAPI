@@ -12,7 +12,8 @@ target 'StockAPI' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'Moya/RxSwift', '~> 14.0'
-
+  pod 'Charts'
+  
   target 'StockAPITests' do
     inherit! :search_paths
     # Pods for testing
