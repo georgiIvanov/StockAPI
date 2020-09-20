@@ -44,12 +44,14 @@ class StockQuotesViewController: UIViewController {
         chartView.legend.enabled = false
         
         chartView.leftAxis.labelFont = UIFont(name: "HelveticaNeue-Light", size: 10)!
+        chartView.leftAxis.labelTextColor = .white
         chartView.leftAxis.spaceTop = 0.3
         chartView.leftAxis.spaceBottom = 0.3
         chartView.leftAxis.axisMinimum = 0
         
         chartView.rightAxis.enabled = false
         
+        chartView.xAxis.labelTextColor = .white
         chartView.xAxis.labelPosition = .bottom
         chartView.xAxis.labelFont = UIFont(name: "HelveticaNeue-Light", size: 10)!
     }
@@ -76,19 +78,20 @@ class StockQuotesViewController: UIViewController {
                                         icon: nil)
         }
         
-        let set1 = CandleChartDataSet(entries: entries, label: nil)
-        set1.axisDependency = .left
-        set1.setColor(UIColor(white: 80/255, alpha: 1))
-        set1.drawIconsEnabled = false
-        set1.shadowColor = .darkGray
-        set1.shadowWidth = 0.7
-        set1.decreasingColor = .red
-        set1.decreasingFilled = true
-        set1.increasingColor = UIColor(red: 122/255, green: 242/255, blue: 84/255, alpha: 1)
-        set1.increasingFilled = false
+        let dataSet = CandleChartDataSet(entries: entries, label: nil)
+        dataSet.axisDependency = .left
+        dataSet.setColor(UIColor(white: 80/255, alpha: 1))
+        dataSet.drawIconsEnabled = false
+        dataSet.shadowColor = UIColor(white: 1, alpha: 0.7)
+        dataSet.shadowWidth = 0.7
+        dataSet.decreasingColor = .red
+        dataSet.decreasingFilled = true
+        dataSet.increasingColor = UIColor(red: 122/255, green: 242/255, blue: 84/255, alpha: 1)
+        dataSet.increasingFilled = false
+        dataSet.valueTextColor = .white
         
-        let data = CandleChartData(dataSet: set1)
-        chartView.data = data
+        let chartData = CandleChartData(dataSet: dataSet)
+        chartView.data = chartData
         chartView.setVisibleXRange(minXRange: 3, maxXRange: 20)
         
         let axisInsetPercentage = 0.02
