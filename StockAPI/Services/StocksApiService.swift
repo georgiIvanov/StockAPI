@@ -68,7 +68,7 @@ extension AlphaVantageApiService {
             }
             
             quotes.sort { (quote1, quote2) in
-                quote1.timeStamp > quote2.timeStamp
+                quote1.timeStamp < quote2.timeStamp
             }
             
             return quotes

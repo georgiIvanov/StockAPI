@@ -17,4 +17,3 @@ extension CandleChartDataEntry {
         self.close = Double(quote.close)!
     }
 }
-

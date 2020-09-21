@@ -117,6 +117,7 @@
                             <constraint firstAttribute="trailing" secondItem="0aj-Lb-YnK" secondAttribute="trailing" constant="8" id="R2u-t0-hYN"/>
                             <constraint firstItem="0aj-Lb-YnK" firstAttribute="centerY" secondItem="EbN-ru-Q3s" secondAttribute="centerY" id="Rdv-iv-Net"/>
                             <constraint firstItem="qj1-5O-GPD" firstAttribute="leading" secondItem="EbN-ru-Q3s" secondAttribute="leading" constant="8" id="V5d-W9-9xA"/>
+                            <constraint firstItem="0aj-Lb-YnK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EBV-tn-3rP" secondAttribute="trailing" constant="8" id="vsz-dd-bEE"/>
                         </constraints>
                     </view>
                     <connections>

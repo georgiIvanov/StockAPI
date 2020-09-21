@@ -21,11 +21,11 @@ class StockQuotesViewController: UIViewController {
         super.viewDidLoad()
         setupChart()
         
-        viewModel.fetchDailyQuotes(symbol: .microsoft).subscribe { [weak self] (quotes) in
+        viewModel.fetchDailyQuotes(symbol: .microsoft).subscribe(onSuccess: { [weak self] (quotes) in
             self?.reloadCandleData(quotes)
-        } onError: { (err) in
+        }, onError: { (err) in
             print(err)
-        }.disposed(by: disposeBag)
+        }).disposed(by: disposeBag)
 
         
     }
@@ -43,13 +43,12 @@ class StockQuotesViewController: UIViewController {
         chartView.pinchZoomEnabled = true
         chartView.legend.enabled = false
         
-        chartView.leftAxis.labelFont = UIFont(name: "HelveticaNeue-Light", size: 10)!
-        chartView.leftAxis.labelTextColor = .white
-        chartView.leftAxis.spaceTop = 0.3
-        chartView.leftAxis.spaceBottom = 0.3
-        chartView.leftAxis.axisMinimum = 0
+        chartView.rightAxis.labelFont = UIFont(name: "HelveticaNeue-Light", size: 10)!
+        chartView.rightAxis.labelTextColor = .white
+        chartView.rightAxis.spaceTop = 0.1
+        chartView.rightAxis.spaceBottom = 0.1
         
-        chartView.rightAxis.enabled = false
+        chartView.leftAxis.enabled = false
         
         chartView.xAxis.labelTextColor = .white
         chartView.xAxis.labelPosition = .bottom
@@ -62,15 +61,15 @@ class StockQuotesViewController: UIViewController {
         var lowest: Double = Double.greatestFiniteMagnitude
         
         print("Fetched quotes count: \(quotes.count)")
-        let entries = (0..<quotes.count).map { (i) -> CandleChartDataEntry in
-            let high = Double(quotes[i].high)!
-            let low = Double(quotes[i].low)!
-            let open = Double(quotes[i].open)!
-            let close = Double(quotes[i].close)!
+        let entries = (0..<quotes.count).map { (index) -> CandleChartDataEntry in
+            let high = Double(quotes[index].high)!
+            let low = Double(quotes[index].low)!
+            let open = Double(quotes[index].open)!
+            let close = Double(quotes[index].close)!
             highest = max(highest, high)
             lowest = min(lowest, low)
             
-            return CandleChartDataEntry(x: Double(i),
+            return CandleChartDataEntry(x: Double(index),
                                         shadowH: high,
                                         shadowL: low,
                                         open: open,
@@ -79,7 +78,7 @@ class StockQuotesViewController: UIViewController {
         }
         
         let dataSet = CandleChartDataSet(entries: entries, label: nil)
-        dataSet.axisDependency = .left
+        dataSet.axisDependency = .right
         dataSet.setColor(UIColor(white: 80/255, alpha: 1))
         dataSet.drawIconsEnabled = false
         dataSet.shadowColor = UIColor(white: 1, alpha: 0.7)
@@ -94,9 +93,8 @@ class StockQuotesViewController: UIViewController {
         chartView.data = chartData
         chartView.setVisibleXRange(minXRange: 3, maxXRange: 20)
         
-        let axisInsetPercentage = 0.02
-        chartView.leftAxis.axisMinimum = lowest - (lowest * axisInsetPercentage)
-        chartView.leftAxis.axisMaximum = highest + (highest * axisInsetPercentage)
+        chartView.moveViewToX(Double(quotes.count))
+        chartView.autoScaleMinMaxEnabled = true
     }
 
     /*

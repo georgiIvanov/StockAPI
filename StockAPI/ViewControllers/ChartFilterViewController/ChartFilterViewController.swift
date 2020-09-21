@@ -17,7 +17,7 @@ class ChartFilterViewController: UIViewController {
     var dataSourceLeft2: [String] = []
     var dataSourceRight: [String] = []
     
-    var pickIndexLeft1: Int? = nil
+    var pickIndexLeft1: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
