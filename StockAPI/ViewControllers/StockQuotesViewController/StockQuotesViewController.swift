@@ -15,12 +15,13 @@ class StockQuotesViewController: UIViewController {
     @IBOutlet weak var chartView: CandleStickChartView!
     
     let disposeBag = DisposeBag()
+    let xAxisFormatter = ChartXAxisFormatter()
     var viewModel: StockQuotesViewModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChart()
-        fetchQuotes(symbol: .microsoft, timeframe: .daily)
+        fetchQuotes(symbol: .microsoft, timeframe: .monthly)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,6 +30,7 @@ class StockQuotesViewController: UIViewController {
     
     func fetchQuotes(symbol: StockSymbol, timeframe: Timeframe) {
         viewModel.fetchQuotes(symbol: symbol, timeframe: timeframe).subscribe(onSuccess: { [weak self] (quotes) in
+            self?.xAxisFormatter.setQuotes(quotes, timeframe: timeframe)
             self?.reloadCandleData(quotes)
         }, onError: { _ in
             
@@ -54,6 +56,7 @@ class StockQuotesViewController: UIViewController {
         chartView.xAxis.labelTextColor = .white
         chartView.xAxis.labelPosition = .bottom
         chartView.xAxis.labelFont = UIFont(name: "HelveticaNeue-Light", size: 10)!
+        chartView.xAxis.valueFormatter = xAxisFormatter
     }
     
     func reloadCandleData(_ quotes: [Quote]) {

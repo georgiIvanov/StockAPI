@@ -23,6 +23,7 @@
 		9715DB962516A13200262191 /* StockQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715DB952516A13200262191 /* StockQuotesViewController.swift */; };
 		977E370B251766DF00BF38B6 /* CandleChartDataEntry+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E370A251766DF00BF38B6 /* CandleChartDataEntry+Extensions.swift */; };
 		977E372125178DB800BF38B6 /* ChartFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E372025178DB800BF38B6 /* ChartFilterViewController.swift */; };
+		977E37392518CCB400BF38B6 /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E37382518CCB400BF38B6 /* ChartXAxisFormatter.swift */; };
 		9782BAC52517563700B59FF3 /* StocksApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9782BAC42517563700B59FF3 /* StocksApiError.swift */; };
 		97C3A48225165B1200490DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A48125165B1200490DEE /* AppDelegate.swift */; };
 		97C3A48425165B1200490DEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A48325165B1200490DEE /* SceneDelegate.swift */; };
@@ -77,6 +78,7 @@
 		9715DB9B2516B06300262191 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		977E370A251766DF00BF38B6 /* CandleChartDataEntry+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandleChartDataEntry+Extensions.swift"; sourceTree = "<group>"; };
 		977E372025178DB800BF38B6 /* ChartFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartFilterViewController.swift; sourceTree = "<group>"; };
+		977E37382518CCB400BF38B6 /* ChartXAxisFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartXAxisFormatter.swift; sourceTree = "<group>"; };
 		9782BAC42517563700B59FF3 /* StocksApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksApiError.swift; sourceTree = "<group>"; };
 		97C3A47E25165B1200490DEE /* StockAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C3A48125165B1200490DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				9715DB462516658000262191 /* Storyboard.swift */,
 				9715DB7925169A4300262191 /* AlphaVantageEndpoint.swift */,
 				977E370A251766DF00BF38B6 /* CandleChartDataEntry+Extensions.swift */,
+				977E37382518CCB400BF38B6 /* ChartXAxisFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				9715DB8925169E0B00262191 /* ServiceAssembly.swift in Sources */,
 				9715DB702516980F00262191 /* Quote.swift in Sources */,
 				9715DB512516660300262191 /* ViewControllerAssembly.swift in Sources */,
+				977E37392518CCB400BF38B6 /* ChartXAxisFormatter.swift in Sources */,
 				9715DB8E25169FEB00262191 /* StockQuotesViewModel.swift in Sources */,
 				9715DB7A25169A4300262191 /* AlphaVantageEndpoint.swift in Sources */,
 				9715DB5B2516667700262191 /* DIContainer.swift in Sources */,
