@@ -10,9 +10,7 @@ import RxSwift
 import Moya
 
 protocol StocksApiServiceProtocol: class {
-    func fetchDailyStockQuotes(symbol: StockSymbol) -> Single<[Quote]>
-    func fetchWeeklyStockQuotes(symbol: StockSymbol) -> Single<[Quote]>
-    func fetchMonthlyStockQuotes(symbol: StockSymbol) -> Single<[Quote]>
+    func fetchStockQuotes(symbol: StockSymbol, timeframe: Timeframe) -> Single<[Quote]>
 }
 
 class AlphaVantageApiService {
@@ -28,20 +26,18 @@ class AlphaVantageApiService {
 }
 
 extension AlphaVantageApiService: StocksApiServiceProtocol {
-    
-    func fetchDailyStockQuotes(symbol: StockSymbol) -> Single<[Quote]> {
-        return fetchStockQuotes(endpoint: .stocksDaily(symbol: symbol),
-                                baseObjKey: "Time Series (Daily)")
-    }
-    
-    func fetchWeeklyStockQuotes(symbol: StockSymbol) -> Single<[Quote]> {
-        return fetchStockQuotes(endpoint: .stocksWeekly(symbol: symbol),
-                                baseObjKey: "Weekly Time Series")
-    }
-    
-    func fetchMonthlyStockQuotes(symbol: StockSymbol) -> Single<[Quote]> {
-        return fetchStockQuotes(endpoint: .stocksMonthly(symbol: symbol),
-                                baseObjKey: "Monthly Time Series")
+    func fetchStockQuotes(symbol: StockSymbol, timeframe: Timeframe) -> Single<[Quote]> {
+        switch timeframe {
+        case .daily:
+            return fetchStockQuotes(endpoint: .stocksDaily(symbol: symbol),
+                                    baseObjKey: "Time Series (Daily)")
+        case .weekly:
+            return fetchStockQuotes(endpoint: .stocksWeekly(symbol: symbol),
+                                    baseObjKey: "Weekly Time Series")
+        case .monthly:
+            return fetchStockQuotes(endpoint: .stocksMonthly(symbol: symbol),
+                                    baseObjKey: "Monthly Time Series")
+        }
     }
 }
 

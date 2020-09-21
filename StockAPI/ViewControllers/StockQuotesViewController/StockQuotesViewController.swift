@@ -20,18 +20,19 @@ class StockQuotesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChart()
-        
-        viewModel.fetchDailyQuotes(symbol: .microsoft).subscribe(onSuccess: { [weak self] (quotes) in
-            self?.reloadCandleData(quotes)
-        }, onError: { (err) in
-            print(err)
-        }).disposed(by: disposeBag)
-
-        
+        fetchQuotes(symbol: .microsoft, timeframe: .daily)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    func fetchQuotes(symbol: StockSymbol, timeframe: Timeframe) {
+        viewModel.fetchQuotes(symbol: symbol, timeframe: timeframe).subscribe(onSuccess: { [weak self] (quotes) in
+            self?.reloadCandleData(quotes)
+        }, onError: { _ in
+            
+        }).disposed(by: disposeBag)
     }
     
     func setupChart() {
@@ -97,18 +98,45 @@ class StockQuotesViewController: UIViewController {
         chartView.autoScaleMinMaxEnabled = true
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let filterVc = segue.destination as? ChartFilterViewController {
+            filterVc.dataSourceLeft1 = StockSymbol.allCases.map { $0.rawValue }
+        }
     }
-    */
-
 }
 
 extension StockQuotesViewController: ChartViewDelegate {
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        guard let entry = entry as? CandleChartDataEntry else {
+            return
+        }
+        
+        
+        print("Entry selected-  X:\(entry.x), open: \(entry.open), close: \(entry.close)")
+    }
     
+    func chartValueNothingSelected(_ chartView: ChartViewBase) {
+        print("Entry unselected")
+    }
+    
+    func chartViewDidEndPanning(_ chartView: ChartViewBase) {
+        print("did end panning")
+    }
+    
+    func chartScaled(_ chartView: ChartViewBase, scaleX: CGFloat, scaleY: CGFloat) {
+        print("chart scaled")
+    }
+    
+    func chartTranslated(_ chartView: ChartViewBase, deltaX: CGFloat, deltaY: CGFloat) {
+        
+    }
+    
+    func chartView(_ chartView: ChartViewBase, animatorDidStop animator: Animator) {
+        print("animator did stop")
+    }
 }
