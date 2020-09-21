@@ -22,6 +22,7 @@
 		9715DB8E25169FEB00262191 /* StockQuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715DB8D25169FEB00262191 /* StockQuotesViewModel.swift */; };
 		9715DB962516A13200262191 /* StockQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9715DB952516A13200262191 /* StockQuotesViewController.swift */; };
 		977E370B251766DF00BF38B6 /* CandleChartDataEntry+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E370A251766DF00BF38B6 /* CandleChartDataEntry+Extensions.swift */; };
+		977E372125178DB800BF38B6 /* ChartFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E372025178DB800BF38B6 /* ChartFilterViewController.swift */; };
 		9782BAC52517563700B59FF3 /* StocksApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9782BAC42517563700B59FF3 /* StocksApiError.swift */; };
 		97C3A48225165B1200490DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A48125165B1200490DEE /* AppDelegate.swift */; };
 		97C3A48425165B1200490DEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A48325165B1200490DEE /* SceneDelegate.swift */; };
@@ -74,6 +75,7 @@
 		9715DB9A2516B01800262191 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9715DB9B2516B06300262191 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		977E370A251766DF00BF38B6 /* CandleChartDataEntry+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CandleChartDataEntry+Extensions.swift"; sourceTree = "<group>"; };
+		977E372025178DB800BF38B6 /* ChartFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartFilterViewController.swift; sourceTree = "<group>"; };
 		9782BAC42517563700B59FF3 /* StocksApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksApiError.swift; sourceTree = "<group>"; };
 		97C3A47E25165B1200490DEE /* StockAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C3A48125165B1200490DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		9715DB38251664AB00262191 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				977E371F25178D9C00BF38B6 /* ChartFilterViewController */,
 				9715DB952516A13200262191 /* StockQuotesViewController.swift */,
 			);
 			path = ViewControllers;
@@ -195,6 +198,14 @@
 				9715DB8825169E0B00262191 /* ServiceAssembly.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		977E371F25178D9C00BF38B6 /* ChartFilterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				977E372025178DB800BF38B6 /* ChartFilterViewController.swift */,
+			);
+			path = ChartFilterViewController;
 			sourceTree = "<group>";
 		};
 		97C3A47525165B1200490DEE = {
@@ -544,6 +555,7 @@
 				9715DB7F25169C5700262191 /* AppConfig.swift in Sources */,
 				97C3A48425165B1200490DEE /* SceneDelegate.swift in Sources */,
 				9715DB752516993D00262191 /* StocksApiService.swift in Sources */,
+				977E372125178DB800BF38B6 /* ChartFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

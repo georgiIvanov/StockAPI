@@ -16,17 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1X-KX-7K7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sdQ-7C-WpW"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Ej4-eU-y1a" kind="embed" identifier="chartFilterSegue" id="CjD-tZ-KOg"/>
+                                </connections>
+                            </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMU-8M-t6J" customClass="CandleStickChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.16470588235294117" green="0.21176470588235294" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="K1X-KX-7K7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3RB-CU-4bw"/>
                             <constraint firstItem="UMU-8M-t6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RYY-EK-g6c"/>
+                            <constraint firstItem="K1X-KX-7K7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vqx-e4-nqp"/>
+                            <constraint firstItem="UMU-8M-t6J" firstAttribute="top" secondItem="K1X-KX-7K7" secondAttribute="bottom" id="XSi-rz-QXL"/>
                             <constraint firstItem="UMU-8M-t6J" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a4U-fC-YkX"/>
-                            <constraint firstItem="UMU-8M-t6J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eDH-1T-NQt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UMU-8M-t6J" secondAttribute="bottom" id="jJW-Al-piI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="K1X-KX-7K7" secondAttribute="top" id="u0i-87-CPa"/>
                         </constraints>
                     </view>
                     <connections>
@@ -36,6 +48,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-207.24637681159422" y="93.75"/>
+        </scene>
+        <!--Chart Filter View Controller-->
+        <scene sceneID="8K1-2j-Kmd">
+            <objects>
+                <viewController id="Ej4-eU-y1a" customClass="ChartFilterViewController" customModule="StockAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EbN-ru-Q3s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qj1-5O-GPD">
+                                <rect key="frame" x="8" y="5" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.48924512987012986" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="3Ai-I9-GJX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="Filter1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBV-tn-3rP">
+                                <rect key="frame" x="96" y="5" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.48924512990000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="cM6-rH-6Ba"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="Filter2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aj-Lb-YnK">
+                                <rect key="frame" x="326" y="5" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.48924512990000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="sYT-sS-soc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="Filter3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10002367424242424" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qj1-5O-GPD" firstAttribute="centerY" secondItem="EbN-ru-Q3s" secondAttribute="centerY" id="3Mk-9q-8sb"/>
+                            <constraint firstItem="EBV-tn-3rP" firstAttribute="centerY" secondItem="EbN-ru-Q3s" secondAttribute="centerY" id="Hgf-YD-fSv"/>
+                            <constraint firstItem="EBV-tn-3rP" firstAttribute="leading" secondItem="qj1-5O-GPD" secondAttribute="trailing" constant="8" symbolic="YES" id="Nye-qa-eJ8"/>
+                            <constraint firstAttribute="trailing" secondItem="0aj-Lb-YnK" secondAttribute="trailing" constant="8" id="R2u-t0-hYN"/>
+                            <constraint firstItem="0aj-Lb-YnK" firstAttribute="centerY" secondItem="EbN-ru-Q3s" secondAttribute="centerY" id="Rdv-iv-Net"/>
+                            <constraint firstItem="qj1-5O-GPD" firstAttribute="leading" secondItem="EbN-ru-Q3s" secondAttribute="leading" constant="8" id="V5d-W9-9xA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterButtonLeft1" destination="qj1-5O-GPD" id="mRh-H7-RJ6"/>
+                        <outlet property="filterButtonLeft2" destination="EBV-tn-3rP" id="pH3-3G-6t0"/>
+                        <outlet property="filterButtonRight" destination="0aj-Lb-YnK" id="fjb-U1-TO3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4PZ-Kc-y8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727.536231884058" y="-112.5"/>
         </scene>
     </scenes>
 </document>
