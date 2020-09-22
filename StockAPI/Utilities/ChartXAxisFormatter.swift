@@ -34,6 +34,12 @@ class ChartXAxisFormatter: IAxisValueFormatter {
     func stringForValue(_ value: Double,
                         axis: AxisBase?) -> String {
         let index = Int(value)
+        
+        guard index < quotes.count && index >= 0 else {
+            print("Index out of bounds, will display it instead of time stamp")
+            return "\(index)"
+        }
+        
         let quote = quotes[index]
         return dateFormatter.string(from: quote.timeStamp)
     }

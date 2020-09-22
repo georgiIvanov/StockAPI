@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum Timeframe {
-    case daily
-    case weekly
-    case monthly
+enum Timeframe: String, CaseIterable {
+    case daily = "Daily"
+    case weekly = "Weekly"
+    case monthly = "Monthly"
 }

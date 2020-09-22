@@ -109,6 +109,7 @@ class StockQuotesViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if let filterVc = segue.destination as? ChartFilterViewController {
             filterVc.dataSourceLeft1 = StockSymbol.allCases.map { $0.rawValue }
+            filterVc.dataSourceRight = Timeframe.allCases.map { $0.rawValue }
         }
     }
 }
