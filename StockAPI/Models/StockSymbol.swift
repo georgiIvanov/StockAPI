@@ -13,4 +13,12 @@ enum StockSymbol: String, CaseIterable {
     case apple = "AAPL"
     case googleA = "GOOGL"
     case facebook = "FB"
+    
+    init?(value: String?) {
+        guard let value = value else {
+            return nil
+        }
+        
+        self.init(rawValue: value)
+    }
 }

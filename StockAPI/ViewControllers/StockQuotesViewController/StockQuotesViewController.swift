@@ -17,11 +17,14 @@ class StockQuotesViewController: UIViewController {
     let disposeBag = DisposeBag()
     let xAxisFormatter = ChartXAxisFormatter()
     var viewModel: StockQuotesViewModelProtocol!
+    var filterVc: ChartFilterViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupChart()
-        fetchQuotes(symbol: .microsoft, timeframe: .monthly)
+        filterVc.selectLeft1(index: 0)
+        filterVc.selectRight(index: 0)
+        bindUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,8 +35,9 @@ class StockQuotesViewController: UIViewController {
         viewModel.fetchQuotes(symbol: symbol, timeframe: timeframe).subscribe(onSuccess: { [weak self] (quotes) in
             self?.xAxisFormatter.setQuotes(quotes, timeframe: timeframe)
             self?.reloadCandleData(quotes)
-        }, onError: { _ in
-            
+        }, onError: { (error) in
+            // TODO: Display error
+            print("Error: \(error)")
         }).disposed(by: disposeBag)
     }
     
@@ -57,6 +61,12 @@ class StockQuotesViewController: UIViewController {
         chartView.xAxis.labelPosition = .bottom
         chartView.xAxis.labelFont = UIFont(name: "HelveticaNeue-Light", size: 10)!
         chartView.xAxis.valueFormatter = xAxisFormatter
+    }
+    
+    func bindUI() {
+        filterVc.filterObservable.subscribe(onNext: { [weak self] (symbol, timeframe) in
+            self?.fetchQuotes(symbol: symbol, timeframe: timeframe)
+        }).disposed(by: disposeBag)
     }
     
     func reloadCandleData(_ quotes: [Quote]) {
@@ -110,6 +120,7 @@ class StockQuotesViewController: UIViewController {
         if let filterVc = segue.destination as? ChartFilterViewController {
             filterVc.dataSourceLeft1 = StockSymbol.allCases.map { $0.rawValue }
             filterVc.dataSourceRight = Timeframe.allCases.map { $0.rawValue }
+            self.filterVc = filterVc
         }
     }
 }

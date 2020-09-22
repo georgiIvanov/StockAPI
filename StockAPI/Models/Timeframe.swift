@@ -11,4 +11,12 @@ enum Timeframe: String, CaseIterable {
     case daily = "Daily"
     case weekly = "Weekly"
     case monthly = "Monthly"
+    
+    init?(value: String?) {
+        guard let value = value else {
+            return nil
+        }
+        
+        self.init(rawValue: value)
+    }
 }
