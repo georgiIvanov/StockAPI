@@ -28,21 +28,32 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMU-8M-t6J" customClass="CandleStickChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="84" width="414" height="778"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Candle Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u0-SI-CMP">
+                                <rect key="frame" x="12" y="96" width="69.5" height="14.5"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.21176470588235294" blue="0.25882352941176467" alpha="0.79651988636363635" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.16470588235294117" green="0.21176470588235294" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="K1X-KX-7K7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3RB-CU-4bw"/>
+                            <constraint firstItem="2u0-SI-CMP" firstAttribute="leading" secondItem="UMU-8M-t6J" secondAttribute="leading" constant="12" id="5PQ-v8-vCq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2u0-SI-CMP" secondAttribute="trailing" constant="12" id="Ndh-Yk-K9S"/>
                             <constraint firstItem="UMU-8M-t6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RYY-EK-g6c"/>
                             <constraint firstItem="K1X-KX-7K7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vqx-e4-nqp"/>
                             <constraint firstItem="UMU-8M-t6J" firstAttribute="top" secondItem="K1X-KX-7K7" secondAttribute="bottom" id="XSi-rz-QXL"/>
                             <constraint firstItem="UMU-8M-t6J" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a4U-fC-YkX"/>
+                            <constraint firstItem="2u0-SI-CMP" firstAttribute="top" secondItem="UMU-8M-t6J" secondAttribute="top" constant="12" id="aU5-0s-NLG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UMU-8M-t6J" secondAttribute="bottom" id="jJW-Al-piI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="K1X-KX-7K7" secondAttribute="top" id="u0i-87-CPa"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="chartView" destination="UMU-8M-t6J" id="S9C-of-xhC"/>
+                        <outlet property="selectedCandleLabel" destination="2u0-SI-CMP" id="Ciw-0W-vMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -109,7 +120,8 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10002367424242424" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="a2E-0W-iLr"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qj1-5O-GPD" firstAttribute="centerY" secondItem="EbN-ru-Q3s" secondAttribute="centerY" id="3Mk-9q-8sb"/>
                             <constraint firstItem="EBV-tn-3rP" firstAttribute="centerY" secondItem="EbN-ru-Q3s" secondAttribute="centerY" id="Hgf-YD-fSv"/>

@@ -13,6 +13,7 @@ import Charts
 class StockQuotesViewController: UIViewController {
     
     @IBOutlet weak var chartView: CandleStickChartView!
+    @IBOutlet weak var selectedCandleLabel: UILabel!
     
     let disposeBag = DisposeBag()
     let xAxisFormatter = ChartXAxisFormatter()
@@ -21,9 +22,7 @@ class StockQuotesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupChart()
-        filterVc.selectLeft1(index: 0)
-        filterVc.selectRight(index: 0)
+        setupUI()
         bindUI()
     }
     
@@ -39,6 +38,13 @@ class StockQuotesViewController: UIViewController {
             // TODO: Display error
             print("Error: \(error)")
         }).disposed(by: disposeBag)
+    }
+    
+    func setupUI() {
+        setupChart()
+        filterVc.selectLeft1(index: 0)
+        filterVc.selectRight(index: 0)
+        updateSelectedCandleLabel(nil)
     }
     
     func setupChart() {
@@ -110,6 +116,16 @@ class StockQuotesViewController: UIViewController {
         chartView.moveViewToX(Double(quotes.count))
         chartView.autoScaleMinMaxEnabled = true
     }
+    
+    func updateSelectedCandleLabel(_ text: String?) {
+        guard let text = text else {
+            selectedCandleLabel.isHidden = true
+            return
+        }
+        
+        selectedCandleLabel.isHidden = false
+        selectedCandleLabel.text = text
+    }
 
     // MARK: - Navigation
 
@@ -131,12 +147,11 @@ extension StockQuotesViewController: ChartViewDelegate {
             return
         }
         
-        
-        print("Entry selected-  X:\(entry.x), open: \(entry.open), close: \(entry.close)")
+        updateSelectedCandleLabel(" O: \(entry.open) H: \(entry.high) L: \(entry.low) C: \(entry.close)  ")
     }
     
     func chartValueNothingSelected(_ chartView: ChartViewBase) {
-        print("Entry unselected")
+        updateSelectedCandleLabel(nil)
     }
     
     func chartViewDidEndPanning(_ chartView: ChartViewBase) {
