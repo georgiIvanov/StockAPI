@@ -11,6 +11,7 @@ target 'StockAPI' do
   pod 'SwiftLint'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'RxSwiftExt'
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'Charts'
   pod 'DropDown'
