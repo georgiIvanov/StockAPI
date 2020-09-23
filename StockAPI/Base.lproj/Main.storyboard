@@ -26,7 +26,7 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMU-8M-t6J" customClass="CandleStickChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="776"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Candle Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u0-SI-CMP">
                                 <rect key="frame" x="12" y="96" width="69.5" height="14.5"/>
@@ -47,7 +47,7 @@
                             <constraint firstItem="UMU-8M-t6J" firstAttribute="top" secondItem="K1X-KX-7K7" secondAttribute="bottom" id="XSi-rz-QXL"/>
                             <constraint firstItem="UMU-8M-t6J" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a4U-fC-YkX"/>
                             <constraint firstItem="2u0-SI-CMP" firstAttribute="top" secondItem="UMU-8M-t6J" secondAttribute="top" constant="12" id="aU5-0s-NLG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UMU-8M-t6J" secondAttribute="bottom" id="jJW-Al-piI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UMU-8M-t6J" secondAttribute="bottom" constant="2" id="jJW-Al-piI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="K1X-KX-7K7" secondAttribute="top" id="u0i-87-CPa"/>
                         </constraints>
                     </view>

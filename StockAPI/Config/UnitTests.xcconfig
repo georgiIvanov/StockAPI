@@ -1,0 +1,17 @@
+//
+//  UnitTests.xcconfig
+//  StockAPI
+//
+//  Created by Voro on 23.09.20.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-StockAPI/Pods-StockAPI.debug.xcconfig"
+
+STOCK_API_BASE_URL = invalid
+
+STOCK_API_KEY = invalid
+
+STUB_RESPONSE = true
