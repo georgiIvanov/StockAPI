@@ -34,8 +34,9 @@ class StockQuotesViewController: UIViewController {
         viewModel.fetchQuotes(symbol: symbol, timeframe: timeframe).subscribe(onSuccess: { [weak self] (quotes) in
             self?.xAxisFormatter.setQuotes(quotes, timeframe: timeframe)
             self?.reloadCandleData(quotes)
-        }, onError: { (error) in
-            // TODO: Display error
+        }, onError: { [weak self] (error) in
+            self?.presentAlertMessage(title: "An error occurred while fetching quotes.",
+                                      message: error.localizedDescription)
             print("Error: \(error)")
         }).disposed(by: disposeBag)
     }
@@ -168,5 +169,13 @@ extension StockQuotesViewController: ChartViewDelegate {
     
     func chartView(_ chartView: ChartViewBase, animatorDidStop animator: Animator) {
         print("animator did stop")
+    }
+}
+
+extension UIViewController {
+    func presentAlertMessage(title: String, message: String?) {
+        let alertVc = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVc.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertVc, animated: true, completion: nil)
     }
 }
