@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_StockAPITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_StockAPITestsVersionString[];
+FOUNDATION_EXPORT double Pods_StockAPI_StockAPITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_StockAPI_StockAPITestsVersionString[];
 

@@ -17,7 +17,7 @@ target 'StockAPI' do
   pod 'DropDown'
   
   target 'StockAPITests' do
-    inherit! :search_paths
+    inherit! :complete
     # Pods for testing
   end
 
