@@ -39,6 +39,7 @@
 		97B49027251B66B4004BBEBF /* StocksMSFTWeekly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900E251B5CD8004BBEBF /* StocksMSFTWeekly.json */; };
 		97B49028251B66B4004BBEBF /* StocksIBMWeekly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900C251B5CD8004BBEBF /* StocksIBMWeekly.json */; };
 		97B49029251B66B4004BBEBF /* StocksIBMMonthly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900A251B5CD8004BBEBF /* StocksIBMMonthly.json */; };
+		97B4902E251B689F004BBEBF /* ChartFilterVcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B4902D251B689F004BBEBF /* ChartFilterVcTests.swift */; };
 		97C3A48225165B1200490DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A48125165B1200490DEE /* AppDelegate.swift */; };
 		97C3A48425165B1200490DEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A48325165B1200490DEE /* SceneDelegate.swift */; };
 		97C3A48925165B1200490DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C3A48725165B1200490DEE /* Main.storyboard */; };
@@ -105,6 +106,7 @@
 		97B4900E251B5CD8004BBEBF /* StocksMSFTWeekly.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StocksMSFTWeekly.json; sourceTree = "<group>"; };
 		97B4900F251B5CD8004BBEBF /* StocksMSFTMonthly.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StocksMSFTMonthly.json; sourceTree = "<group>"; };
 		97B4901C251B5D5E004BBEBF /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		97B4902D251B689F004BBEBF /* ChartFilterVcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartFilterVcTests.swift; sourceTree = "<group>"; };
 		97C3A47E25165B1200490DEE /* StockAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C3A48125165B1200490DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97C3A48325165B1200490DEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 			children = (
 				97B48FE5251B5756004BBEBF /* StubResponses */,
 				97B48FC0251B4B64004BBEBF /* StockQuotesViewModelTests.swift */,
+				97B4902D251B689F004BBEBF /* ChartFilterVcTests.swift */,
 				97C3A49A25165B1300490DEE /* Info.plist */,
 			);
 			path = StockAPITests;
@@ -657,6 +660,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97B48FC1251B4B64004BBEBF /* StockQuotesViewModelTests.swift in Sources */,
+				97B4902E251B689F004BBEBF /* ChartFilterVcTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

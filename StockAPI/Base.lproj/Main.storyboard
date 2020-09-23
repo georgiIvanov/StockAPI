@@ -63,7 +63,7 @@
         <!--Chart Filter View Controller-->
         <scene sceneID="8K1-2j-Kmd">
             <objects>
-                <viewController id="Ej4-eU-y1a" customClass="ChartFilterViewController" customModule="StockAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChartFilterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ej4-eU-y1a" customClass="ChartFilterViewController" customModule="StockAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EbN-ru-Q3s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

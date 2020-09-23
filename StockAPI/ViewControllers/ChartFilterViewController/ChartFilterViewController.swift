@@ -30,20 +30,10 @@ class ChartFilterViewController: UIViewController {
     var dataSourceLeft2: [String] = []
     var dataSourceRight: [String] = []
     
-    var pickIndexLeft1: Int?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if dataSourceLeft1.count > 0 {
-            
-        } else {
-            filterButtonLeft1.isHidden = true
-        }
-        
         setupUI()
         bindUI()
-        // Do any additional setup after loading the view.
     }
     
     func setupUI() {
