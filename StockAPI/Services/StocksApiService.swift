@@ -27,17 +27,18 @@ class AlphaVantageApiService {
 
 extension AlphaVantageApiService: StocksApiServiceProtocol {
     func fetchStockQuotes(symbol: StockSymbol, timeframe: Timeframe) -> Single<[Quote]> {
+        var baseObjKey = ""
         switch timeframe {
         case .daily:
-            return fetchStockQuotes(endpoint: .stocksDaily(symbol: symbol),
-                                    baseObjKey: "Time Series (Daily)")
+            baseObjKey = "Time Series (Daily)"
         case .weekly:
-            return fetchStockQuotes(endpoint: .stocksWeekly(symbol: symbol),
-                                    baseObjKey: "Weekly Time Series")
+            baseObjKey = "Weekly Time Series"
         case .monthly:
-            return fetchStockQuotes(endpoint: .stocksMonthly(symbol: symbol),
-                                    baseObjKey: "Monthly Time Series")
+            baseObjKey = "Monthly Time Series"
         }
+        
+        return fetchStockQuotes(endpoint: .stocks(symbol: symbol, timeframe: timeframe),
+                                baseObjKey: baseObjKey)
     }
 }
 

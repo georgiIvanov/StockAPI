@@ -11,9 +11,7 @@ import Moya
 typealias AlphaVantageApi = MoyaProvider<AlphaVantageEndpoint>
 
 enum AlphaVantageEndpoint {
-    case stocksDaily(symbol: StockSymbol)
-    case stocksWeekly(symbol: StockSymbol)
-    case stocksMonthly(symbol: StockSymbol)
+    case stocks(symbol: StockSymbol, timeframe: Timeframe)
 }
 
 extension AlphaVantageEndpoint: TargetType {
@@ -23,7 +21,7 @@ extension AlphaVantageEndpoint: TargetType {
     
     var path: String {
         switch self {
-        case .stocksDaily, .stocksWeekly, .stocksMonthly:
+        case .stocks:
             return "query"
         }
     }
@@ -38,8 +36,8 @@ extension AlphaVantageEndpoint: TargetType {
     
     var task: Task {
         switch self {
-        case .stocksDaily(let symbol), .stocksWeekly(let symbol), .stocksMonthly(let symbol):
-            let params = buildStockQuoteParams(symbol: symbol, endpoint: self)
+        case .stocks(let symbol, let timeframe):
+            let params = buildStockQuoteParams(symbol: symbol, timeframe: timeframe)
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }
     }
@@ -50,18 +48,18 @@ extension AlphaVantageEndpoint: TargetType {
 }
 
 private extension AlphaVantageEndpoint {
-    func buildStockQuoteParams(symbol: StockSymbol, endpoint: AlphaVantageEndpoint) -> [String: Any] {
+    func buildStockQuoteParams(symbol: StockSymbol, timeframe: Timeframe) -> [String: Any] {
         var params: [String: Any] = [
             "symbol": symbol.rawValue,
             "apikey": AppConfig.stockApiKey
         ]
         
-        switch endpoint {
-        case .stocksDaily:
+        switch timeframe {
+        case .daily:
             params["function"] = "TIME_SERIES_DAILY"
-        case .stocksWeekly:
+        case .weekly:
             params["function"] = "TIME_SERIES_WEEKLY"
-        case .stocksMonthly:
+        case .monthly:
             params["function"] = "TIME_SERIES_MONTHLY"
         }
         
