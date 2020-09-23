@@ -31,7 +31,11 @@ extension AlphaVantageEndpoint: TargetType {
     }
     
     var sampleData: Data {
-        return Data()
+        switch self {
+        case .stocks(let symbol, let timeframe):
+            let fileName = "Stocks" + symbol.rawValue + timeframe.rawValue
+            return Data.jsonData(fileName: fileName) ?? Data()
+        }
     }
     
     var task: Task {

@@ -26,6 +26,19 @@
 		977E37392518CCB400BF38B6 /* ChartXAxisFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977E37382518CCB400BF38B6 /* ChartXAxisFormatter.swift */; };
 		9782BAC52517563700B59FF3 /* StocksApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9782BAC42517563700B59FF3 /* StocksApiError.swift */; };
 		97B48FC1251B4B64004BBEBF /* StockQuotesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B48FC0251B4B64004BBEBF /* StockQuotesViewModelTests.swift */; };
+		97B49010251B5CD9004BBEBF /* StocksIBMMonthly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900A251B5CD8004BBEBF /* StocksIBMMonthly.json */; };
+		97B49011251B5CD9004BBEBF /* StocksIBMDaily.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900B251B5CD8004BBEBF /* StocksIBMDaily.json */; };
+		97B49012251B5CD9004BBEBF /* StocksIBMWeekly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900C251B5CD8004BBEBF /* StocksIBMWeekly.json */; };
+		97B49013251B5CD9004BBEBF /* StocksMSFTDaily.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900D251B5CD8004BBEBF /* StocksMSFTDaily.json */; };
+		97B49014251B5CD9004BBEBF /* StocksMSFTWeekly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900E251B5CD8004BBEBF /* StocksMSFTWeekly.json */; };
+		97B49015251B5CD9004BBEBF /* StocksMSFTMonthly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900F251B5CD8004BBEBF /* StocksMSFTMonthly.json */; };
+		97B4901D251B5D5E004BBEBF /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B4901C251B5D5E004BBEBF /* Data+Extensions.swift */; };
+		97B49021251B66B0004BBEBF /* StocksIBMDaily.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900B251B5CD8004BBEBF /* StocksIBMDaily.json */; };
+		97B49025251B66B4004BBEBF /* StocksMSFTDaily.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900D251B5CD8004BBEBF /* StocksMSFTDaily.json */; };
+		97B49026251B66B4004BBEBF /* StocksMSFTMonthly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900F251B5CD8004BBEBF /* StocksMSFTMonthly.json */; };
+		97B49027251B66B4004BBEBF /* StocksMSFTWeekly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900E251B5CD8004BBEBF /* StocksMSFTWeekly.json */; };
+		97B49028251B66B4004BBEBF /* StocksIBMWeekly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900C251B5CD8004BBEBF /* StocksIBMWeekly.json */; };
+		97B49029251B66B4004BBEBF /* StocksIBMMonthly.json in Resources */ = {isa = PBXBuildFile; fileRef = 97B4900A251B5CD8004BBEBF /* StocksIBMMonthly.json */; };
 		97C3A48225165B1200490DEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A48125165B1200490DEE /* AppDelegate.swift */; };
 		97C3A48425165B1200490DEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3A48325165B1200490DEE /* SceneDelegate.swift */; };
 		97C3A48925165B1200490DEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C3A48725165B1200490DEE /* Main.storyboard */; };
@@ -85,6 +98,13 @@
 		9782BAC42517563700B59FF3 /* StocksApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksApiError.swift; sourceTree = "<group>"; };
 		97B48FBC251B49DE004BBEBF /* UnitTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UnitTests.xcconfig; sourceTree = "<group>"; };
 		97B48FC0251B4B64004BBEBF /* StockQuotesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuotesViewModelTests.swift; sourceTree = "<group>"; };
+		97B4900A251B5CD8004BBEBF /* StocksIBMMonthly.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StocksIBMMonthly.json; sourceTree = "<group>"; };
+		97B4900B251B5CD8004BBEBF /* StocksIBMDaily.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StocksIBMDaily.json; sourceTree = "<group>"; };
+		97B4900C251B5CD8004BBEBF /* StocksIBMWeekly.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StocksIBMWeekly.json; sourceTree = "<group>"; };
+		97B4900D251B5CD8004BBEBF /* StocksMSFTDaily.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StocksMSFTDaily.json; sourceTree = "<group>"; };
+		97B4900E251B5CD8004BBEBF /* StocksMSFTWeekly.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StocksMSFTWeekly.json; sourceTree = "<group>"; };
+		97B4900F251B5CD8004BBEBF /* StocksMSFTMonthly.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StocksMSFTMonthly.json; sourceTree = "<group>"; };
+		97B4901C251B5D5E004BBEBF /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		97C3A47E25165B1200490DEE /* StockAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C3A48125165B1200490DEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97C3A48325165B1200490DEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +188,7 @@
 				9715DB7925169A4300262191 /* AlphaVantageEndpoint.swift */,
 				977E370A251766DF00BF38B6 /* CandleChartDataEntry+Extensions.swift */,
 				977E37382518CCB400BF38B6 /* ChartXAxisFormatter.swift */,
+				97B4901C251B5D5E004BBEBF /* Data+Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -229,6 +250,19 @@
 			path = StockQuotesViewController;
 			sourceTree = "<group>";
 		};
+		97B48FE5251B5756004BBEBF /* StubResponses */ = {
+			isa = PBXGroup;
+			children = (
+				97B4900B251B5CD8004BBEBF /* StocksIBMDaily.json */,
+				97B4900A251B5CD8004BBEBF /* StocksIBMMonthly.json */,
+				97B4900C251B5CD8004BBEBF /* StocksIBMWeekly.json */,
+				97B4900D251B5CD8004BBEBF /* StocksMSFTDaily.json */,
+				97B4900F251B5CD8004BBEBF /* StocksMSFTMonthly.json */,
+				97B4900E251B5CD8004BBEBF /* StocksMSFTWeekly.json */,
+			);
+			path = StubResponses;
+			sourceTree = "<group>";
+		};
 		97C3A47525165B1200490DEE = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +308,7 @@
 		97C3A49725165B1300490DEE /* StockAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				97B48FE5251B5756004BBEBF /* StubResponses */,
 				97B48FC0251B4B64004BBEBF /* StockQuotesViewModelTests.swift */,
 				97C3A49A25165B1300490DEE /* Info.plist */,
 			);
@@ -418,7 +453,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				97C3A48E25165B1300490DEE /* LaunchScreen.storyboard in Resources */,
+				97B49021251B66B0004BBEBF /* StocksIBMDaily.json in Resources */,
 				97C3A48B25165B1300490DEE /* Assets.xcassets in Resources */,
+				97B49025251B66B4004BBEBF /* StocksMSFTDaily.json in Resources */,
+				97B49028251B66B4004BBEBF /* StocksIBMWeekly.json in Resources */,
+				97B49027251B66B4004BBEBF /* StocksMSFTWeekly.json in Resources */,
+				97B49026251B66B4004BBEBF /* StocksMSFTMonthly.json in Resources */,
+				97B49029251B66B4004BBEBF /* StocksIBMMonthly.json in Resources */,
 				97C3A48925165B1200490DEE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +468,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97B49013251B5CD9004BBEBF /* StocksMSFTDaily.json in Resources */,
+				97B49010251B5CD9004BBEBF /* StocksIBMMonthly.json in Resources */,
+				97B49014251B5CD9004BBEBF /* StocksMSFTWeekly.json in Resources */,
+				97B49012251B5CD9004BBEBF /* StocksIBMWeekly.json in Resources */,
+				97B49015251B5CD9004BBEBF /* StocksMSFTMonthly.json in Resources */,
+				97B49011251B5CD9004BBEBF /* StocksIBMDaily.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +643,7 @@
 				9715DB422516655B00262191 /* UIViewController+Extensions.swift in Sources */,
 				9782BAC52517563700B59FF3 /* StocksApiError.swift in Sources */,
 				9715DB6B251694F300262191 /* StockSymbol.swift in Sources */,
+				97B4901D251B5D5E004BBEBF /* Data+Extensions.swift in Sources */,
 				9715DB962516A13200262191 /* StockQuotesViewController.swift in Sources */,
 				9715DB7F25169C5700262191 /* AppConfig.swift in Sources */,
 				97C3A48425165B1200490DEE /* SceneDelegate.swift in Sources */,
